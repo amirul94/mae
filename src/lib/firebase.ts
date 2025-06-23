@@ -3,12 +3,12 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAm7L_B4ve6ximY_0fvfx2HlKbXPEH_rw4",
-  authDomain: "mae-mobile-finance-assistant.firebaseapp.com",
-  projectId: "mae-mobile-finance-assistant",
-  storageBucket: "mae-mobile-finance-assistant.firebasestorage.app",
-  messagingSenderId: "951500087922",
-  appId: "1:951500087922:web:618824072d5f396dd858eb"
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "YOUR_API_KEY",
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "your-app.firebaseapp.com",
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "your-app",
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || "your-app.appspot.com",
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || "your-messaging-sender-id",
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || "your-app-id","
 };
 
 if (!firebase.apps.length) {
